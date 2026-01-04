@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>JEDEC-ONG | Jeunes Engagés pour le Développement Communautaire</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --primary:#0b5ed7;
+  --secondary:#198754;
+  --accent:#ffc107;
+  --dark:#0a0a0a;
+  --light:#f8f9fa;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+  background:var(--light);
+  color:#222;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(
+    to right,
+    #123b2a,
+    #1f8f4a,
+    #f4c430
+  );
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+header img{
+  height:60px;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+  color:#333;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(rgba(11,94,215,.75), rgba(25,135,84,.75)),
+    url('jedec.jpg') center/cover;
+  color:#fff;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h1{
+  font-size:48px;
+  max-width:900px;
+  margin:auto;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:20px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:35px;
+  background:var(--accent);
+  color:#000;
+  padding:16px 36px;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+/* SECTIONS */
+.section{
+  padding:90px 40px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section h2{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.section p.subtitle{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 60px;
+  color:#555;
+  font-size:18px;
+}
+
+/* AXES */
+.axes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.axis{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  transition:.3s;
+}
+
+.axis:hover{
+  transform:translateY(-6px);
+}
+
+.axis span{
+  font-size:40px;
+  display:block;
+  margin-bottom:15px;
+}
+
+.axis h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+/* DON */
+.don{
+  background:linear-gradient(135deg,var(--secondary),var(--primary));
+  color:#fff;
+  padding:90px 30px;
+  text-align:center;
+}
+
+.don h2{
+  font-size:38px;
+}
+
+.don p{
+  max-width:750px;
+  margin:20px auto;
+  font-size:19px;
+}
+
+/* LOCALISATION */
+.location{
+  background:#fff;
+  padding:70px 30px;
+  text-align:center;
+}
+
+.location h3{
+  font-size:28px;
+  color:var(--secondary);
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#ccc;
+  padding:40px 20px;
+  text-align:center;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="JEDEC ONG">
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="statuts-gouvernance.html">Statuts & Gouvernance</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="partenaires.html">Partenaires</a>
+    <a href="don.html">Dons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Jeunes Engagés pour le Développement Communautaire</h1>
+  <p>
+    JEDEC-ONG agit pour la protection de l’enfance, la paix, l’inclusion sociale
+    et le développement durable au Bénin.
+  </p>
+  <a href="don.html" class="btn">Soutenir nos actions 💙</a>
+</section>
+
+<section class="section">
+  <h2>Nos domaines d’intervention</h2>
+  <p class="subtitle">
+    Nous œuvrons avec et pour les communautés afin de bâtir un avenir
+    plus juste, inclusif et durable.
+  </p>
+
+  <div class="axes">
+    <div class="axis"><span>🧒</span><h3>Protection de l’enfant</h3></div>
+    <div class="axis"><span>⚽</span><h3>Sport & cohésion sociale</h3></div>
+    <div class="axis"><span>🚺</span><h3>VBG & DSSR</h3></div>
+    <div class="axis"><span>💼</span><h3>Entrepreneuriat jeune</h3></div>
+    <div class="axis"><span>🤝</span><h3>Inclusion sociale</h3></div>
+    <div class="axis"><span>🌍</span><h3>ODD & droits humains</h3></div>
+    <div class="axis"><span>🕊️</span><h3>Paix & cohésion</h3></div>
+  </div>
+</section>
+
+<section class="don">
+  <h2>Chaque don change une vie</h2>
+  <p>
+    Votre soutien permet de financer des projets concrets pour les enfants,
+    les jeunes et les communautés vulnérables.
+  </p>
+  <a href="don.html" class="btn">Faire un don maintenant 🙏</a>
+</section>
+
+<section class="location">
+  <h3>📍 Zone d’intervention principale</h3>
+  <p>Bénin — Nous avanon des Points Focaux Communaux sur toute l'étendu du territoire National</p>
+</section>
+
+<footer>
+  © 2025 JEDEC-ONG – Jeunes Engagés pour le Développement Communautaire<br>
+  ONG basée à Djougou quartier Sassirou avant le terrain à droite, Bénin
+</footer>
+
+</body>
+</html>

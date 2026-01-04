@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Faire un don | ONG JEDEC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FEDAPAY -->
+<script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+
+<style>
+:root{
+  --green:#1f8f4a;
+  --yellow:#f4c430;
+  --dark:#0f2f22;
+  --light:#f6faf7;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+  margin:0;
+  background:#f4f7f5;
+  color:#222;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(
+    to right,
+    #123b2a,
+    #1f8f4a,
+    #f4c430
+  );
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:4px solid;
+  border-image:linear-gradient(to right,var(--vert),var(--jaune),var(--rouge)) 1;
+}
+
+.header-container{
+  max-width:1200px;
+  width: 100%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+header img{
+  height:55px;
+}
+
+nav a{
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  margin-left:18px;
+}
+
+nav a:hover{
+  color:var(--yellow);
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("jedec.jpg");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:70px 20px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:38px;
+  color:var(--yellow);
+}
+
+.hero p{
+  max-width:800px;
+  margin:15px auto 0;
+  font-size:17px;
+}
+
+/* DON */
+.container{
+  max-width:1000px;
+  margin:60px auto;
+  padding:20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.card h2{
+  color:var(--green);
+}
+
+.amounts{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:25px 0;
+}
+
+.amounts span{
+  background:var(--light);
+  border:1px solid var(--green);
+  color:var(--green);
+  padding:10px 18px;
+  border-radius:25px;
+  font-weight:700;
+}
+
+button{
+  margin-top:20px;
+  padding:16px 40px;
+  background:var(--green);
+  color:#fff;
+  border:none;
+  border-radius:35px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#176e39;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="logo.png" alt="JEDEC ONG">
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="statuts-gouvernance.html">Statuts & Gouvernance</a>
+      <a href="programmes.html">Programmes</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="partenaires.html">Partenaires</a>
+      <a href="don.html">Dons</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>💚 Faire un don</h1>
+  <p>
+    Chaque contribution soutient directement les actions de l’ONG JEDEC
+    pour les jeunes, les enfants et le développement communautaire.
+  </p>
+</section>
+
+<section class="container">
+  <div class="card">
+    <h2>Paiement sécurisé via Fedapay</h2>
+    <p>
+      Mobile Money (MTN & Moov) et carte bancaire (Visa / Mastercard)
+    </p>
+
+    <div class="amounts">
+      <span>2 000 FCFA</span>
+      <span>5 000 FCFA</span>
+      <span>10 000 FCFA</span>
+      <span>Autre montant</span>
+    </div>
+
+    <button onclick="payerFedapay()">
+      Faire un don maintenant
+    </button>
+  </div>
+</section>
+
+<footer>
+  ONG JEDEC – Jeunes Engagés pour le Développement Communautaire<br>
+  Djougou – Bénin | MoMo : <strong>0197050577</strong><br>
+  © 2025 Tous droits réservés
+</footer>
+
+<script>
+function payerFedapay(){
+  const checkout = FedaPay.checkout({
+    public_key: "pk_test_8f9c1e0b1c9b4f8a8c7d", // clé test
+    transaction: {
+      amount: 5000,
+      description: "Don de soutien à l’ONG JEDEC"
+    },
+    customer: {
+      email: "test@jedec.org",
+      firstname: "Donateur",
+      lastname: "JEDEC"
+    }
+  });
+
+  checkout.open();
+}
+</script>
+
+
+</body>
+</html>

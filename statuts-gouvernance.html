@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Statuts & Gouvernance | JEDEC ONG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --primary:#1f8f4a;
+  --secondary:#f4c430;
+  --dark:#193b2a;
+  --light:#f7faf8;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--light);
+  color:#222;
+}
+
+/* HEADER SIMPLE */
+header{
+  background:linear-gradient(
+    to right,
+    #123b2a,
+    #1f8f4a,
+    #f4c430
+  );
+  padding:15px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:4px solid var(--primary);
+}
+
+header img{
+  height:55px;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('banner.jpg') center/cover;
+  color:#fff;
+  padding:80px 20px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+}
+
+/* SECTIONS */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.block{
+  background:#fff;
+  border-radius:12px;
+  padding:35px;
+  margin-bottom:40px;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  animation:fadeUp .8s ease forwards;
+}
+
+.block h2{
+  color:var(--primary);
+  margin-top:0;
+}
+
+.block ul{
+  padding-left:20px;
+}
+
+.block ul li{
+  margin-bottom:10px;
+}
+
+/* GOUVERNANCE GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:var(--light);
+  padding:25px;
+  border-radius:10px;
+  border-left:6px solid var(--primary);
+}
+
+.card h3{
+  margin-top:0;
+  color:var(--dark);
+}
+
+/* BOUTON */
+.btn{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  padding:14px 30px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px)}
+  to{opacity:1; transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="JEDEC ONG Logo">
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="statuts-gouvernance.html">Statuts & Gouvernance</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="partenaires.html">Partenaires</a>
+    <a href="don.html">Dons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Statuts & Gouvernance</h1>
+  <p>Un cadre légal solide et une gouvernance transparente au service du développement communautaire.</p>
+</section>
+
+<section class="container">
+
+  <div class="block">
+    <h2>📜 Statuts de l’ONG JEDEC</h2>
+    <p>
+      L’ONG JEDEC est régie par des statuts et un règlement intérieur qui définissent
+      son fonctionnement, ses objectifs, ses organes de décision et ses règles de gestion.
+    </p>
+    <p>
+      Ces documents garantissent la légalité, la transparence et la crédibilité de l’organisation
+      auprès des partenaires, des autorités et des bénéficiaires.
+    </p>
+
+    <a class="btn" href="JEDEC ONG Statut et règlement intérieur.pdf" target="_blank">
+      📥 Télécharger les statuts officiels
+    </a>
+  </div>
+
+  <div class="block">
+    <h2>🏛️ Organes de Gouvernance</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Assemblée Générale</h3>
+        <p>
+          Organe suprême de décision, elle définit les grandes orientations de l’ONG
+          et valide les rapports d’activités et financiers.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Conseil d’Administration</h3>
+        <p>
+          Chargé de la gestion stratégique et du suivi des activités, il veille à la bonne
+          application des décisions de l’Assemblée Générale.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Bureau Exécutif</h3>
+        <p>
+          Organe opérationnel, il assure la mise en œuvre des projets, la gestion quotidienne
+          et la coordination des équipes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>⚖️ Principes de fonctionnement</h2>
+    <ul>
+      <li>Transparence dans la gestion administrative et financière</li>
+      <li>Participation démocratique des membres</li>
+      <li>Responsabilité et redevabilité</li>
+      <li>Respect des lois et règlements en vigueur</li>
+      <li>Promotion de l’éthique et de la bonne gouvernance</li>
+    </ul>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 – ONG JEDEC | Jeunes Engagés pour le Développement Communautaire
+</footer>
+
+</body>
+</html>

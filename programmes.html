@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Programmes | ONG JEDEC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --vert:#1f8f4a;
+  --jaune:#f4c430;
+  --rouge:#e53935;
+  --fond:#f6faf7;
+  --dark:#0f2f1f;
+}
+
+*{box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+body{margin:0;background:var(--fond);color:#222}
+
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(
+    to right,
+    #123b2a,
+    #1f8f4a,
+    #f4c430
+  );
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:4px solid;
+  border-image:linear-gradient(to right,var(--vert),var(--jaune),var(--rouge)) 1;
+}
+
+header img{height:55px}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+  color:#333;
+}
+
+/* ===== HERO PROGRAMMES ===== */
+.hero{
+  min-height:55vh;
+  background:
+    linear-gradient(rgba(15,47,31,.75),rgba(15,47,31,.75)),
+    url("jedec.jpg") center/cover;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:750px;
+  font-size:18px;
+  line-height:1.6;
+}
+
+/* ===== INTRO ===== */
+.intro{
+  background:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.intro h2{
+  color:var(--vert);
+  margin-bottom:15px;
+}
+
+.intro p{
+  max-width:850px;
+  margin:auto;
+  color:#555;
+  font-size:17px;
+}
+
+/* ===== PROGRAMS GRID ===== */
+.programs{
+  padding:80px 40px;
+}
+
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
+}
+
+/* ===== PROGRAM CARD ===== */
+.program{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.4s ease;
+}
+
+.program:hover{
+  transform:translateY(-10px);
+}
+
+.program-header{
+  padding:25px;
+  color:#fff;
+  font-size:22px;
+  font-weight:700;
+}
+
+.p1{background:linear-gradient(135deg,#1f8f4a,#3cb371)}
+.p2{background:linear-gradient(135deg,#e53935,#ff6b6b)}
+.p3{background:linear-gradient(135deg,#f4c430,#f7d046)}
+.p4{background:linear-gradient(135deg,#2e7dff,#6fa8ff)}
+.p5{background:linear-gradient(135deg,#6a1b9a,#9c27b0)}
+.p6{background:linear-gradient(135deg,#0f2f1f,#1f8f4a)}
+
+.program-body{
+  padding:25px;
+}
+
+.program-body p{
+  color:#444;
+  line-height:1.6;
+}
+
+/* ===== CTA ===== */
+.cta{
+  background:
+    linear-gradient(rgba(31,143,74,.9),rgba(31,143,74,.9)),
+    url("jedec.jpg") center/cover;
+  color:#fff;
+  text-align:center;
+  padding:70px 20px;
+}
+
+.cta h2{margin-bottom:15px}
+.cta p{max-width:700px;margin:auto}
+
+.cta a{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 30px;
+  background:#fff;
+  color:var(--vert);
+  border-radius:6px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo JEDEC">
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="statuts-gouvernance.html">Statuts & Gouvernance</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="partenaires.html">Partenaires</a>
+    <a href="don.html">Dons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Nos Programmes</h1>
+    <p>
+      À travers ses programmes, l’ONG JEDEC agit concrètement pour renforcer les capacités des jeunes,
+      protéger les droits humains et bâtir des communautés solidaires et durables.
+    </p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <h2>Des actions structurées à fort impact</h2>
+  <p>
+    Les programmes de JEDEC sont conçus pour répondre aux besoins réels des communautés,
+    avec une approche inclusive, participative et orientée vers des résultats durables.
+  </p>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs">
+  <div class="program-grid">
+
+    <div class="program">
+      <div class="program-header p1">👶 Protection de l’Enfant</div>
+      <div class="program-body">
+        <p>
+          Prévention des violences, lutte contre l’exploitation et promotion des droits de l’enfant
+          à travers la sensibilisation, l’éducation et l’accompagnement communautaire.
+        </p>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="program-header p2">⚖️ VBG – DSSR</div>
+      <div class="program-body">
+        <p>
+          Lutte contre les violences basées sur le genre, promotion de la santé sexuelle
+          et reproductive, accompagnement psychosocial des victimes.
+        </p>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="program-header p3">🏃 Sport & Cohésion Sociale</div>
+      <div class="program-body">
+        <p>
+          Utilisation du sport comme levier de paix, d’inclusion sociale,
+          de leadership des jeunes et de prévention des conflits.
+        </p>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="program-header p4">🚀 Entrepreneuriat & Insertion</div>
+      <div class="program-body">
+        <p>
+          Formation à l’entrepreneuriat, accompagnement des initiatives économiques
+          et insertion professionnelle des jeunes et des femmes.
+        </p>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="program-header p5">🌍 ODD & Développement Durable</div>
+      <div class="program-body">
+        <p>
+          Actions en lien avec les Objectifs de Développement Durable :
+          environnement, inclusion, gouvernance locale et citoyenneté.
+        </p>
+      </div>
+    </div>
+
+    <div class="program">
+      <div class="program-header p6">🤝 Paix & Droits Humains</div>
+      <div class="program-body">
+        <p>
+          Promotion de la paix, de la cohésion sociale et du respect des droits humains
+          à travers l’éducation citoyenne et le dialogue communautaire.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Agissons ensemble</h2>
+  <p>
+    Rejoignez l’ONG JEDEC dans ses actions pour un développement inclusif,
+    équitable et durable au Bénin.
+  </p>
+  <a href="don.html">Nous soutenir</a>
+</section>
+
+<footer>
+  © ONG JEDEC – Jeunes Engagés pour le Développement Communautaire | Djougou – Bénin
+</footer>
+
+</body>
+</html>

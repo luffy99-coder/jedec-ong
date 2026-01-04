@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contact | ONG JEDEC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --vert:#1f8f4a;
+  --jaune:#f4c430;
+  --rouge:#e53935;
+  --fond:#f4f8f6;
+  --fonce:#123b28;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--fond);
+  color:#222;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(
+    to right,
+    #123b2a,
+    #1f8f4a,
+    #f4c430
+  );
+  border-bottom:4px solid;
+  border-image:linear-gradient(to right,var(--vert),var(--jaune),var(--rouge)) 1;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header img{height:60px}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:600;
+  color:#333;
+}
+
+nav a:hover{color:var(--vert)}
+
+/* ===== HERO ===== */
+.hero{
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("jedec.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:90px 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  opacity:.95;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section{
+  padding:80px 10%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:50px;
+}
+
+/* ===== INFO BOX ===== */
+.contact-info{
+  background:#fff;
+  border-radius:14px;
+  padding:35px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.contact-info h2{
+  color:var(--vert);
+  margin-bottom:25px;
+}
+
+.info-item{
+  margin-bottom:18px;
+  font-size:16px;
+}
+
+.info-item span{
+  font-weight:700;
+  color:var(--fonce);
+}
+
+/* ===== FORM ===== */
+.contact-form{
+  background:#fff;
+  border-radius:14px;
+  padding:40px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.contact-form h2{
+  color:var(--vert);
+  margin-bottom:25px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:18px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
+
+.contact-form textarea{
+  resize:none;
+  height:140px;
+}
+
+.contact-form button{
+  background:var(--vert);
+  color:#fff;
+  border:none;
+  padding:14px 30px;
+  font-size:16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.contact-form button:hover{
+  background:#176c38;
+}
+
+/* ===== MAP ===== */
+.map{
+  margin:0 10% 80px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.1);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#123b28;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:#fff;
+  padding:15px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="JEDEC ONG">
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="statuts-gouvernance.html">Statuts & Gouvernance</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="partenaires.html">Partenaires</a>
+    <a href="don.html">Dons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Contactez-nous</h1>
+  <p>Vous souhaitez collaborer avec l’ONG JEDEC, soutenir nos actions ou obtenir des informations ?  
+  Nous sommes à votre écoute.</p>
+</section>
+
+<section class="contact-section">
+
+  <!-- INFOS -->
+  <div class="contact-info">
+    <h2>📍 Nos coordonnées</h2>
+
+    <div class="info-item">
+      <span>Organisation :</span> Jeunes Engagés pour le Développement Communautaire (JEDEC)
+    </div>
+
+    <div class="info-item">
+      <span>Localisation :</span> Djougou – Bénin
+    </div>
+
+    <div class="info-item">
+      <span>Email :</span> <a href="mailto:impacttoure@gmail.com">impacttoure@gmail.com</a>
+    </div>
+
+    <div class="info-item">
+      <span>Téléphone :</span> <a href="tel:+2290162332342">+229 01 62 33 23 42</a>
+    </div>
+
+    <div class="info-item">
+      <span>Réseaux sociaux :</span> <a href="https://www.facebook.com/profile.php?id=100070015247122" target="_blank">
+  📘 Facebook
+</a>
+<a href="https://wa.me/22997050577?text=Bonjour, je souhaite avoir des informations sur l’ONG JEDEC."
+   target="_blank">
+  💬 WhatsApp
+</a>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="contact-form">
+    <h2>✉️ Envoyez-nous un message</h2>
+
+    <form action="https://formspree.io/f/xregwlby" method="POST">
+      <input type="text" name="Nom et prénom" placeholder="Nom et prénom" required>
+      <input type="email" name="Adresse email" placeholder="Adresse email" required>
+      <input type="text" name="Sujet" placeholder="Sujet">
+      <textarea name="message" placeholder="Votre message"></textarea>
+      <button type="submit">Envoyer le message</button>
+    </form>
+  </div>
+
+</section>
+
+<!-- MAP -->
+<div class="map">
+<iframe
+  src="https://www.google.com/maps?q=Djougou,Bénin&output=embed"
+  width="100%"
+  height="350"
+  style="border:0;"
+  allowfullscreen
+  loading="lazy">
+</iframe>
+</div>
+
+<footer>
+© 2025 ONG JEDEC – Tous droits réservés | Engagement • Solidarité • Développement
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/22997050577?text=Bonjour, je souhaite avoir des informations sur l’ONG JEDEC."
+   target="_blank">
+💬 WhatsApp
+</a>
+
+</body>
+</html>

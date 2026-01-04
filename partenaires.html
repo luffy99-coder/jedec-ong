@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Partenaires | ONG JEDEC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --primary:#1f8f4a;
+  --secondary:#f4c430;
+  --dark:#123b2a;
+  --light:#f6faf7;
+}
+
+*{box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+
+body{
+  margin:0;
+  background:#f4f7f5;
+  color:#222;
+}
+
+/* ===== HEADER (tu peux garder EXACTEMENT le tien) ===== */
+header{
+   background:linear-gradient(
+    to right,
+    #123b2a,
+    #1f8f4a,
+    #f4c430
+  );
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:4px solid;
+  border-image:linear-gradient(to right,var(--vert),var(--jaune),var(--rouge)) 1;
+}
+
+header img{height:55px}
+
+nav a{
+  color:#000;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+  url("jedec.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:80px 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h1{font-size:40px;margin-bottom:10px}
+.hero p{max-width:800px;margin:auto;font-size:17px}
+
+/* ===== FILTRES ===== */
+.filters{
+  text-align:center;
+  padding:40px 20px 20px;
+}
+
+.filters button{
+  border:none;
+  padding:10px 20px;
+  margin:5px;
+  border-radius:30px;
+  background:#e0e0e0;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.filters button.active,
+.filters button:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* ===== GRILLE PARTENAIRES ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.partner{
+  background:#fff;
+  border-radius:14px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.partner:hover{
+  transform:translateY(-8px);
+}
+
+.partner img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.partner h3{
+  color:var(--primary);
+  margin-bottom:5px;
+}
+
+.partner span{
+  font-size:13px;
+  color:#777;
+}
+
+/* ===== MODAL ===== */
+.modal{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.modal-content{
+  background:#fff;
+  max-width:600px;
+  width:90%;
+  padding:30px;
+  border-radius:16px;
+  position:relative;
+}
+
+.modal-content h2{
+  color:var(--primary);
+}
+
+.close{
+  position:absolute;
+  top:15px;right:20px;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.modal-content p{
+  color:#444;
+  line-height:1.6;
+}
+
+.modal-content a{
+  display:inline-block;
+  margin-top:15px;
+  color:#fff;
+  background:var(--primary);
+  padding:10px 20px;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+  margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="JEDEC">
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="statuts-gouvernance.html">Statuts & Gouvernance</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="partenaires.html">Partenaires</a>
+    <a href="don.html">Dons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>🤝 Nos Partenaires & Membres Actifs</h1>
+  <p>Ils accompagnent l’ONG JEDEC dans ses actions pour le développement communautaire.</p>
+</section>
+
+<section class="filters">
+  <button class="active" onclick="filterPartners('all')">Tous</button>
+  <button onclick="filterPartners('institution')">Institutions</button>
+  <button onclick="filterPartners('ong')">ONG</button>
+  <button onclick="filterPartners('prive')">Partenaires privés</button>
+  <button onclick="filterPartners('membre')">Membres actifs</button>
+</section>
+
+<section class="container">
+  <div class="grid">
+
+    <!-- INSTITUTIONS -->
+    <div class="partner institution" onclick="openModal('p1')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
+      <h3>Mairie de Djougou</h3>
+      <span>Institution</span>
+    </div>
+
+    <!-- ONG-->
+    <div class="partner ong" onclick="openModal('p2')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
+      <h3>ONG Partenaire X</h3>
+      <span>ONG</span>
+    </div>
+
+    <!-- ONG -->
+    <div class="partner ong" onclick="openModal('p3')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
+      <h3>ONG Partenaire X</h3>
+      <span>ONG</span>
+    </div>
+
+    <!-- PARTENAIRES Privés -->
+    <div class="partner prive" onclick="openModal('p4')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
+      <h3>JDine</h3>
+      <span>Partenaires Privés</span>
+    </div>
+
+    <!-- MEMBRE ACTIFS -->
+    <div class="partner membre" onclick="openModal('p5')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
+      <h3>MUGI</h3>
+      <span>Membre actif</span>
+    </div>
+
+    <!-- MEMBRE ACTIFS -->
+    <div class="partner membre" onclick="openModal('p6')">
+      <img src="4.jpg">
+      <h3>Djamal</h3>
+      <span>Membre actif</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MODALS ===== -->
+<div class="modal" id="p1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('p1')">✖</span>
+    <h2>Mairie de Djougou</h2>
+    <p>Partenaire institutionnel accompagnant JEDEC dans les actions de jeunesse, de cohésion sociale et de développement local.</p>
+  </div>
+</div>
+
+<div class="modal" id="p2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('p2')">✖</span>
+    <h2>ONG Partenaire X</h2>
+    <p>ONG collaboratrice dans les domaines de l’éducation, de la protection de l’enfance et des droits humains.</p>
+  </div>
+</div>
+
+<div class="modal" id="p3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('p3')">✖</span>
+    <h2>Jean Dupont</h2>
+    <p>Membre actif engagé dans les programmes communautaires et la mobilisation des jeunes.</p>
+  </div>
+</div>
+
+<div class="modal" id="p4">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('p4')">✖</span>
+    <h2>JDine</h2>
+    <p>TEST.</p>
+  </div>
+</div>
+
+<div class="modal" id="p5">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('p5')">✖</span>
+    <h2>MUGI</h2>
+    <p>TEST.</p>
+  </div>
+</div>
+
+<div class="modal" id="p6">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('p6')">✖</span>
+    <h2>Djamal</h2>
+    <p>Actuellement président de l'organisation</p>
+  </div>
+</div>
+
+<footer>
+  ONG JEDEC – Jeunes Engagés pour le Développement Communautaire<br>
+  © 2025 – Tous droits réservés
+</footer>
+
+<script>
+function filterPartners(type){
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  document.querySelectorAll('.partner').forEach(p=>{
+    if(type==='all' || p.classList.contains(type)){
+      p.style.display='block';
+    }else{
+      p.style.display='none';
+    }
+  });
+}
+
+function openModal(id){
+  document.getElementById(id).style.display='flex';
+}
+
+function closeModal(id){
+  document.getElementById(id).style.display='none';
+}
+</script>
+
+</body>
+</html>

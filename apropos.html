@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>À propos | JEDEC ONG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --vert:#1f8f4a;
+  --jaune:#f4c430;
+  --fond:#f6faf7;
+  --texte:#222;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--fond);
+  color:var(--texte);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(
+    to right,
+    #123b2a,
+    #1f8f4a,
+    #f4c430
+  );
+  padding:15px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:4px solid;
+  border-image:linear-gradient(to right,var(--vert),var(--jaune)) 1;
+}
+
+header img{
+  height:55px;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--vert);
+}
+
+/* HERO */
+.hero{
+  background:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  max-width:800px;
+  margin:auto;
+  color:#555;
+  font-size:18px;
+}
+
+
+/* SECTIONS */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.block{
+  background:#fff;
+  padding:35px;
+  border-radius:14px;
+  margin-bottom:35px;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+  animation:fadeUp .8s ease both;
+}
+
+.block h2{
+  margin-top:0;
+  color:var(--vert);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.block ul{
+  padding-left:20px;
+}
+
+.block ul li{
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+  background:#193b2a;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+  margin-top:60px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="logo.png" alt="JEDEC ONG">
+  <nav>
+   <a href="index.html">Accueil</a>
+    <a href="apropos.html">À propos</a>
+    <a href="statuts-gouvernance.html">Statuts & Gouvernance</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="partenaires.html">Partenaires</a>
+    <a href="don.html">Dons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>À propos de l’ONG JEDEC</h1>
+  <p>Jeunes Engagés pour le Développement Communautaire</p>
+</section>
+
+<!-- CONTENU -->
+<div class="container">
+
+  <div class="block">
+    <h2>👥 Qui sommes-nous ?</h2>
+    <p>
+      L’ONG JEDEC (Jeunes Engagés pour le Développement Communautaire) est une organisation
+      non gouvernementale engagée dans la promotion du développement humain,
+      social et durable au sein des communautés, en particulier auprès des jeunes
+      et des populations vulnérables.
+    </p>
+    <p>
+      Créée avec la conviction que le développement passe par l’éducation,
+      la solidarité et l’action citoyenne, JEDEC œuvre pour offrir des solutions
+      concrètes aux défis sociaux, économiques et environnementaux.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>🎯 Notre mission</h2>
+    <ul>
+      <li>Renforcer les capacités des jeunes et des communautés locales</li>
+      <li>Promouvoir l’éducation, la formation et l’insertion socio-professionnelle</li>
+      <li>Encourager la solidarité, la paix et la cohésion sociale</li>
+      <li>Contribuer au développement durable à travers des actions concrètes et inclusives</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>🌍 Notre vision</h2>
+    <p>
+      JEDEC aspire à bâtir une société plus solidaire, plus équitable,
+      où chaque jeune et chaque citoyen a les moyens de participer activement
+      au développement de sa communauté.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>🛠️ Nos domaines d’intervention</h2>
+    <ul>
+      <li>Éducation et formation</li>
+      <li>Autonomisation des jeunes et des femmes</li>
+      <li>Développement communautaire</li>
+      <li>Actions sociales et humanitaires</li>
+      <li>Protection de l’environnement</li>
+      <li>Sensibilisation citoyenne</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>🤝 Nos valeurs</h2>
+    <ul>
+      <li>Engagement</li>
+      <li>Transparence</li>
+      <li>Solidarité</li>
+      <li>Responsabilité</li>
+      <li>Respect de la dignité humaine</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>💚 Pourquoi nous soutenir ?</h2>
+    <ul>
+      <li>Investir dans l’avenir des jeunes</li>
+      <li>Participer à des actions à impact réel</li>
+      <li>Contribuer au développement durable des communautés</li>
+      <li>Promouvoir une société plus juste et inclusive</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>📌 Notre engagement</h2>
+    <p>
+      JEDEC s’engage à mener ses actions avec sérieux, transparence et efficacité,
+      en collaboration avec les communautés locales, les partenaires et les institutions.
+    </p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 – ONG JEDEC | Jeunes Engagés pour le Développement Communautaire
+</footer>
+
+</body>
+</html>
