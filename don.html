@@ -206,28 +206,27 @@ footer{
   © 2025 Tous droits réservés
 </footer>
 
+<script src="https://cdn.fedapay.com/checkout.js"></script>
+
 <script>
-function payerFedapay(){
-  const checkout = FedaPay.checkout({
-    public_key: "pk_test_8f9c1e0b1c9b4f8a8c7d", // clé test
+document.getElementById("don-btn").addEventListener("click", function () {
+  FedaPay.init({
+    public_key: "pk_test_TA_VRAIE_CLE_ICI",
     transaction: {
-      amount: 5000,
-      description: "Don de soutien à l’ONG JEDEC"
+      amount: 1000,
+      description: "Don ONG JEDEC"
     },
     customer: {
-      email: "test@jedec.org",
-      firstname: "Donateur",
-      lastname: "JEDEC"
+      email: "test@jedec.org"
     }
   });
-
-  checkout.open();
-}
+});
 </script>
 
-
+  
 </body>
 </html>
+
 
 
 
