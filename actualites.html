@@ -169,11 +169,65 @@ footer{
 </footer>
 
 <script>
-document.querySelector(".news-grid").innerHTML = "<h1 style='color:red'>TEST OK</h1>";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQHZG5JCHCpHfw2zGYfMnlj78ypgQu5Xxrql5jy4cQ7PwNfd33Gycvz-zcvSz9Gl3ub0Vm6cXOEt3U0/pub?gid=0&single=true&output=csv";
+
+fetch(CSV_URL)
+  .then(r => r.text())
+  .then(csv => {
+
+    const grid = document.querySelector(".news-grid");
+    if (!grid) {
+      console.error("❌ .news-grid introuvable");
+      return;
+    }
+
+    let rows = csv.trim().split("\n");
+    rows.shift(); // SUPPRIME L'EN-TÊTE (OBLIGATOIRE)
+
+    let html = "";
+
+    rows.reverse().forEach(row => {
+      const c = row.split(",").map(x => x.replace(/^"|"$/g, "").trim());
+      if (c.length < 5) return;
+
+      html += `
+        <div class="news-card">
+          <img src="${c[4]}" loading="lazy">
+          <div class="news-content">
+            <div class="news-date">${c[0]}</div>
+            <h3>${c[1]}</h3>
+            <p>${c[2]}</p>
+
+            <div class="more-text" style="display:none">
+              <p>${c[3]}</p>
+            </div>
+
+            <button class="btn-lire-plus">Lire plus</button>
+          </div>
+        </div>
+      `;
+    });
+
+    grid.innerHTML = html;
+
+    document.querySelectorAll(".btn-lire-plus").forEach(btn => {
+      btn.onclick = () => {
+        const more = btn.previousElementSibling;
+        const open = more.style.display === "block";
+        more.style.display = open ? "none" : "block";
+        btn.textContent = open ? "Lire plus" : "Lire moins";
+      };
+    });
+
+  })
+  .catch(err => {
+    console.error("❌ Erreur chargement CSV", err);
+  });
 </script>
 
 </body>
 </html>
+
 
 
 
