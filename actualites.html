@@ -181,7 +181,7 @@ fetch(SHEET_URL)
     let html = "";
 
     rows.reverse().forEach(row=>{
-      const c = row.split('";"').map(x=>x.replace(/"/g,""));
+      const c = row.split(";").map(x=>x.replace(/"/g,""));
       if(c.length < 5) return;
 
       html += `
@@ -213,4 +213,5 @@ fetch(SHEET_URL)
 
 </body>
 </html>
+
 
