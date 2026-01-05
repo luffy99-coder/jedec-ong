@@ -216,7 +216,23 @@ let data = [];
 fetch(SHEET_URL)
 .then(r=>r.text())
 .then(csv=>{
-  data = csv.split("\n").slice(1).filter(r=>r.trim()).reverse();
+  const priority = {
+  "président": 1,
+  "vice-président": 2,
+  "secrétaire": 3,
+  "trésorier": 4,
+  "membre": 5
+};
+
+data = csv
+  .split("\n")
+  .slice(1)
+  .filter(r => r.trim())
+  .sort((a, b) => {
+    const roleA = a.split(",")[1]?.toLowerCase().trim();
+    const roleB = b.split(",")[1]?.toLowerCase().trim();
+    return (priority[roleA] || 99) - (priority[roleB] || 99);
+  });
   renderPage();
 });
 
@@ -302,6 +318,7 @@ function closeModal(id){
 
 </body>
 </html>
+
 
 
 
