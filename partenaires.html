@@ -198,30 +198,7 @@ footer{
 </section>
 
 <!-- MODALS -->
-modalBox.innerHTML += `
-  <div class="modal" id="${id}">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('${id}')">✖</span>
-      <h2>${nom}</h2>
-
-      <span class="badge-role" style="
-        display:inline-block;
-        margin-bottom:10px;
-        padding:6px 14px;
-        background:#1f8f4a;
-        color:#fff;
-        border-radius:20px;
-        font-size:13px;
-        font-weight:600;
-      ">
-        ${fonction}
-      </span>
-
-      <p>${description || ""}</p>
-    </div>
-  </div>
-`;
-
+<div id="modalContainer"></div>
 
 <!-- FOOTER -->
 <footer>
@@ -310,6 +287,7 @@ function closeModal(id){
 
 </body>
 </html>
+
 
 
 
