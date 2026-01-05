@@ -213,10 +213,8 @@ const ITEMS_PER_PAGE = 6;
 let currentPage = 1;
 let data = [];
 
-fetch(SHEET_URL)
-.then(r=>r.text())
-.then(csv=>{
-  const priority = {
+// priorité des rôles
+const ROLE_PRIORITY = {
   "président": 1,
   "vice-président": 2,
   "secrétaire": 3,
@@ -224,15 +222,30 @@ fetch(SHEET_URL)
   "membre": 5
 };
 
-data = csv
-  .split("\n")
-  .slice(1)
-  .filter(r => r.trim())
-  .sort((a, b) => {
-    const roleA = a.split(",")[1]?.toLowerCase().trim();
-    const roleB = b.split(",")[1]?.toLowerCase().trim();
-    return (priority[roleA] || 99) - (priority[roleB] || 99);
-  });
+fetch(SHEET_URL)
+.then(r => r.text())
+.then(csv => {
+  data = csv
+    .split("\n")
+    .slice(1)
+    .map(r => r.trim())
+    .filter(Boolean)
+    .map(line => {
+      const parts = line.split(",");
+      return {
+        date: parts[0] || "",
+        nom: parts[1] || "",
+        role: parts[2] || "",
+        image: parts[3] || "",
+        description: parts.slice(4).join(",") || ""
+      };
+    })
+    .sort((a, b) => {
+      const rA = a.role.toLowerCase().trim();
+      const rB = b.role.toLowerCase().trim();
+      return (ROLE_PRIORITY[rA] || 99) - (ROLE_PRIORITY[rB] || 99);
+    });
+
   renderPage();
 });
 
@@ -244,59 +257,61 @@ function renderPage(){
   grid.innerHTML = "";
   modalBox.innerHTML = "";
 
-  const start = (currentPage-1)*ITEMS_PER_PAGE;
-  const end = start + ITEMS_PER_PAGE;
-  const pageData = data.slice(start,end);
+  const start = (currentPage - 1) * ITEMS_PER_PAGE;
+  const pageData = data.slice(start, start + ITEMS_PER_PAGE);
 
-  pageData.forEach((row,i)=>{
-    const [date,nom,fonction,image,description] = row.split(",");
-    const id = "membre"+start+i;
+  pageData.forEach((membre, i) => {
+    const id = "membre_" + (start + i);
 
     grid.innerHTML += `
       <div class="partner" onclick="openModal('${id}')">
-        <img src="${image.trim()}">
-        <h3>${nom}</h3>
-        <span class="badge-role">${fonction}</span>
+        <img src="${membre.image.trim()}" alt="${membre.nom}">
+        <h3>${membre.nom}</h3>
+        <span class="badge-role">${membre.role}</span>
       </div>
     `;
 
     modalBox.innerHTML += `
-  <div class="modal" id="${id}">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('${id}')">✖</span>
-      <h2>${nom}</h2>
+      <div class="modal" id="${id}">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('${id}')">✖</span>
+          <h2>${membre.nom}</h2>
 
-      <span class="badge-role" style="
-        display:inline-block;
-        margin-bottom:10px;
-        padding:6px 14px;
-        background:#1f8f4a;
-        color:#fff;
-        border-radius:20px;
-        font-size:13px;
-        font-weight:600;
-      ">
-        ${fonction}
-      </span>
+          <span class="badge-role" style="
+            display:inline-block;
+            margin-bottom:10px;
+            padding:6px 14px;
+            background:#1f8f4a;
+            color:#fff;
+            border-radius:20px;
+            font-size:13px;
+            font-weight:600;
+          ">
+            ${membre.role}
+          </span>
 
-      <p>${description || ""}</p>
-    </div>
-  </div>
-`;
-
+          <p>${membre.description}</p>
+        </div>
+      </div>
+    `;
   });
 
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
   pagination.innerHTML = "";
 
-  for(let i=1;i<=totalPages;i++){
+  for(let i = 1; i <= totalPages; i++){
     pagination.innerHTML += `
       <button onclick="goPage(${i})"
-      style="margin:5px;padding:8px 14px;border:none;border-radius:20px;
-      background:${i===currentPage?'#1f8f4a':'#ccc'};
-      color:${i===currentPage?'#fff':'#000'};
-      cursor:pointer;">
-      ${i}
+        style="
+          margin:5px;
+          padding:8px 14px;
+          border:none;
+          border-radius:20px;
+          background:${i === currentPage ? '#1f8f4a' : '#ccc'};
+          color:${i === currentPage ? '#fff' : '#000'};
+          cursor:pointer;
+        ">
+        ${i}
       </button>
     `;
   }
@@ -308,16 +323,17 @@ function goPage(p){
 }
 
 function openModal(id){
-  document.getElementById(id).style.display="flex";
+  document.getElementById(id).style.display = "flex";
 }
+
 function closeModal(id){
-  document.getElementById(id).style.display="none";
+  document.getElementById(id).style.display = "none";
 }
 </script>
 
-
 </body>
 </html>
+
 
 
 
