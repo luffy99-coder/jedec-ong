@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Partenaires | ONG JEDEC</title>
-  <link rel="icon" type="image/png" href="image/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -16,26 +15,25 @@
 
 *{box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
 
+/* ===== BACKGROUND GLOBAL ===== */
 body{
   margin:0;
-  background:#f4f7f5;
-  color:#222;
+  background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("jedec.jpg");
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center;
+  color:#fff;
 }
 
-/* ===== HEADER (tu peux garder EXACTEMENT le tien) ===== */
+/* ===== HEADER (INCHANGÉ) ===== */
 header{
-   background:linear-gradient(
-    to right,
-    #123b2a,
-    #1f8f4a,
-    #f4c430
-  );
+  background:linear-gradient(to right,#123b2a,#1f8f4a,#f4c430);
   padding:15px 30px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:4px solid;
-  border-image:linear-gradient(to right,var(--vert),var(--jaune),var(--rouge)) 1;
 }
 
 header img{height:55px}
@@ -46,50 +44,33 @@ nav a{
   text-decoration:none;
   font-weight:600;
 }
+nav a:hover{color:var(--secondary)}
 
 /* ===== HERO ===== */
 .hero{
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-  url("jedec.jpg");
-  background-size:cover;
-  background-position:center;
-  padding:80px 20px;
   text-align:center;
-  color:#fff;
+  padding:90px 20px 60px;
+}
+.hero h1{
+  font-size:42px;
+  color:var(--secondary);
+  margin-bottom:10px;
+}
+.hero p{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+  opacity:.95;
 }
 
-.hero h1{font-size:40px;margin-bottom:10px}
-.hero p{max-width:800px;margin:auto;font-size:17px}
-
-/* ===== FILTRES ===== */
-.filters{
-  text-align:center;
-  padding:40px 20px 20px;
-}
-
-.filters button{
-  border:none;
-  padding:10px 20px;
-  margin:5px;
-  border-radius:30px;
-  background:#e0e0e0;
-  cursor:pointer;
-  font-weight:600;
-}
-
-.filters button.active,
-.filters button:hover{
-  background:var(--primary);
-  color:#fff;
-}
-
-/* ===== GRILLE PARTENAIRES ===== */
+/* ===== CONTAINER ===== */
 .container{
   max-width:1200px;
   margin:auto;
-  padding:40px 20px;
+  padding:40px 20px 80px;
 }
 
+/* ===== GRID MEMBRES ===== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -98,10 +79,11 @@ nav a{
 
 .partner{
   background:#fff;
+  color:#222;
   border-radius:14px;
   padding:25px;
   text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
   cursor:pointer;
   transition:.3s;
 }
@@ -115,7 +97,7 @@ nav a{
   height:320px;
   object-fit:cover;
   border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  margin-bottom:15px;
 }
 
 .partner h3{
@@ -124,8 +106,8 @@ nav a{
 }
 
 .partner span{
-  font-size:13px;
-  color:#777;
+  font-size:14px;
+  color:#666;
 }
 
 /* ===== MODAL ===== */
@@ -133,7 +115,7 @@ nav a{
   position:fixed;
   top:0;left:0;
   width:100%;height:100%;
-  background:rgba(0,0,0,.6);
+  background:rgba(0,0,0,.7);
   display:none;
   align-items:center;
   justify-content:center;
@@ -142,9 +124,10 @@ nav a{
 
 .modal-content{
   background:#fff;
+  color:#222;
   max-width:600px;
   width:90%;
-  padding:30px;
+  padding:35px;
   border-radius:16px;
   position:relative;
 }
@@ -160,34 +143,31 @@ nav a{
   cursor:pointer;
 }
 
-.modal-content p{
-  color:#444;
-  line-height:1.6;
-}
-
-.modal-content a{
-  display:inline-block;
-  margin-top:15px;
-  color:#fff;
-  background:var(--primary);
-  padding:10px 20px;
-  border-radius:30px;
-  text-decoration:none;
-}
-
-/* ===== FOOTER ===== */
+/* ===== FOOTER (COMPLET) ===== */
 footer{
-  background:var(--dark);
+  background:rgba(0,0,0,.85);
   color:#fff;
   text-align:center;
-  padding:30px 20px;
-  margin-top:60px;
+  padding:35px 20px;
+  font-size:14px;
+}
+
+.badge-role{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 14px;
+  background:var(--secondary);
+  color:#000;
+  font-size:12px;
+  font-weight:700;
+  border-radius:20px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <img src="logo.png" alt="JEDEC">
   <nav>
@@ -202,144 +182,107 @@ footer{
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>🤝 Nos Partenaires & Membres Actifs</h1>
-  <p>Ils accompagnent l’ONG JEDEC dans ses actions pour le développement communautaire.</p>
+  <h1>🤝 Membres actifs</h1>
+  <p>
+    Découvrez les membres engagés qui font vivre l’ONG JEDEC
+    au quotidien sur le terrain.
+  </p>
 </section>
 
-<section class="filters">
-  <button class="active" onclick="filterPartners('all')">Tous</button>
-  <button onclick="filterPartners('institution')">Institutions</button>
-  <button onclick="filterPartners('ong')">ONG</button>
-  <button onclick="filterPartners('prive')">Partenaires privés</button>
-  <button onclick="filterPartners('membre')">Membres actifs</button>
-</section>
-
+<!-- MEMBRES -->
 <section class="container">
-  <div class="grid">
-
-    <!-- INSTITUTIONS -->
-    <div class="partner institution" onclick="openModal('p1')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
-      <h3>Mairie de Djougou</h3>
-      <span>Institution</span>
-    </div>
-
-    <!-- ONG-->
-    <div class="partner ong" onclick="openModal('p2')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
-      <h3>ONG Partenaire X</h3>
-      <span>ONG</span>
-    </div>
-
-    <!-- ONG -->
-    <div class="partner ong" onclick="openModal('p3')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
-      <h3>ONG Partenaire X</h3>
-      <span>ONG</span>
-    </div>
-
-    <!-- PARTENAIRES Privés -->
-    <div class="partner prive" onclick="openModal('p4')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
-      <h3>JDine</h3>
-      <span>Partenaires Privés</span>
-    </div>
-
-    <!-- MEMBRE ACTIFS -->
-    <div class="partner membre" onclick="openModal('p5')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_placeholder.png">
-      <h3>MUGI</h3>
-      <span>Membre actif</span>
-    </div>
-
-    <!-- MEMBRE ACTIFS -->
-    <div class="partner membre" onclick="openModal('p6')">
-      <img src="4.jpg">
-      <h3>Djamal</h3>
-      <span>Membre actif</span>
-    </div>
-
-  </div>
+  <div class="grid" id="membersGrid"></div>
 </section>
 
-<!-- ===== MODALS ===== -->
-<div class="modal" id="p1">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('p1')">✖</span>
-    <h2>Mairie de Djougou</h2>
-    <p>Partenaire institutionnel accompagnant JEDEC dans les actions de jeunesse, de cohésion sociale et de développement local.</p>
-  </div>
-</div>
+<!-- MODALS -->
+<div id="modalContainer"></div>
 
-<div class="modal" id="p2">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('p2')">✖</span>
-    <h2>ONG Partenaire X</h2>
-    <p>ONG collaboratrice dans les domaines de l’éducation, de la protection de l’enfance et des droits humains.</p>
-  </div>
-</div>
-
-<div class="modal" id="p3">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('p3')">✖</span>
-    <h2>Jean Dupont</h2>
-    <p>Membre actif engagé dans les programmes communautaires et la mobilisation des jeunes.</p>
-  </div>
-</div>
-
-<div class="modal" id="p4">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('p4')">✖</span>
-    <h2>JDine</h2>
-    <p>TEST.</p>
-  </div>
-</div>
-
-<div class="modal" id="p5">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('p5')">✖</span>
-    <h2>MUGI</h2>
-    <p>TEST.</p>
-  </div>
-</div>
-
-<div class="modal" id="p6">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('p6')">✖</span>
-    <h2>Djamal</h2>
-    <p>Actuellement président de l'organisation</p>
-  </div>
-</div>
-
+<!-- FOOTER -->
 <footer>
   ONG JEDEC – Jeunes Engagés pour le Développement Communautaire<br>
+  Djougou – Bénin<br>
   © 2025 – Tous droits réservés
 </footer>
 
 <script>
-function filterPartners(type){
-  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
-  event.target.classList.add('active');
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQHZG5JCHCpHfw2zGYfMnlj78ypgQu5Xxrql5jy4cQ7PwNfd33Gycvz-zcvSz9Gl3ub0Vm6cXOEt3U0/pub?gid=383464484&single=true&output=csv";
+const ITEMS_PER_PAGE = 6;
+let currentPage = 1;
+let data = [];
 
-  document.querySelectorAll('.partner').forEach(p=>{
-    if(type==='all' || p.classList.contains(type)){
-      p.style.display='block';
-    }else{
-      p.style.display='none';
-    }
+fetch(SHEET_URL)
+.then(r=>r.text())
+.then(csv=>{
+  data = csv.split("\n").slice(1).filter(r=>r.trim()).reverse();
+  renderPage();
+});
+
+function renderPage(){
+  const grid = document.getElementById("membersGrid");
+  const modalBox = document.getElementById("modalContainer");
+  const pagination = document.getElementById("pagination");
+
+  grid.innerHTML = "";
+  modalBox.innerHTML = "";
+
+  const start = (currentPage-1)*ITEMS_PER_PAGE;
+  const end = start + ITEMS_PER_PAGE;
+  const pageData = data.slice(start,end);
+
+  pageData.forEach((row,i)=>{
+    const [date,nom,fonction,image,description] = row.split(",");
+    const id = "membre"+start+i;
+
+    grid.innerHTML += `
+      <div class="partner" onclick="openModal('${id}')">
+        <img src="${image.trim()}">
+        <h3>${nom}</h3>
+        <span class="badge-role">${fonction}</span>
+      </div>
+    `;
+
+    modalBox.innerHTML += `
+      <div class="modal" id="${id}">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('${id}')">✖</span>
+          <h2>${nom}</h2>
+          <p>${description}</p>
+        </div>
+      </div>
+    `;
   });
+
+  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+  pagination.innerHTML = "";
+
+  for(let i=1;i<=totalPages;i++){
+    pagination.innerHTML += `
+      <button onclick="goPage(${i})"
+      style="margin:5px;padding:8px 14px;border:none;border-radius:20px;
+      background:${i===currentPage?'#1f8f4a':'#ccc'};
+      color:${i===currentPage?'#fff':'#000'};
+      cursor:pointer;">
+      ${i}
+      </button>
+    `;
+  }
+}
+
+function goPage(p){
+  currentPage = p;
+  renderPage();
 }
 
 function openModal(id){
-  document.getElementById(id).style.display='flex';
+  document.getElementById(id).style.display="flex";
 }
-
 function closeModal(id){
-  document.getElementById(id).style.display='none';
+  document.getElementById(id).style.display="none";
 }
 </script>
 
+
 </body>
 </html>
-
