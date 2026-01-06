@@ -2,7 +2,26 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+
 <title>Partenaires | ONG JEDEC</title>
+
+<!-- SEO -->
+<meta name="description" content="Découvrez les membres actifs et partenaires engagés de l’ONG JEDEC, qui œuvrent chaque jour pour le développement communautaire, la jeunesse et la solidarité au Bénin.">
+<meta name="keywords" content="ONG JEDEC partenaires, membres ONG JEDEC, partenaires développement communautaire, ONG jeunesse Bénin, acteurs sociaux JEDEC">
+<meta name="author" content="ONG JEDEC">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Partenaires & Membres | ONG JEDEC">
+<meta property="og:description" content="Rencontrez les membres et partenaires qui font vivre l’ONG JEDEC sur le terrain.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Partenaires | ONG JEDEC">
+<meta name="twitter:description" content="Membres et partenaires engagés de l’ONG JEDEC au service du développement communautaire.">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -169,13 +188,11 @@ footer{
   line-height:1.8;
   margin-top:15px;
 }
-  
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="logo.png" alt="JEDEC">
   <nav>
@@ -190,7 +207,6 @@ footer{
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <h1>🤝 Membres actifs</h1>
   <p>
@@ -199,15 +215,12 @@ footer{
   </p>
 </section>
 
-<!-- MEMBRES -->
 <section class="container">
   <div class="grid" id="membersGrid"></div>
 </section>
 
-<!-- MODALS -->
 <div id="modalContainer"></div>
 
-<!-- FOOTER -->
 <footer>
   ONG JEDEC – Jeunes Engagés pour le Développement Communautaire<br>
   Djougou – Bénin<br>
@@ -220,7 +233,6 @@ const ITEMS_PER_PAGE = 6;
 let currentPage = 1;
 let data = [];
 
-// priorité des rôles
 const ROLE_PRIORITY = {
   "président": 1,
   "vice-président": 2,
@@ -259,7 +271,6 @@ fetch(SHEET_URL)
 function renderPage(){
   const grid = document.getElementById("membersGrid");
   const modalBox = document.getElementById("modalContainer");
-  const pagination = document.getElementById("pagination");
 
   grid.innerHTML = "";
   modalBox.innerHTML = "";
@@ -283,56 +294,17 @@ function renderPage(){
         <div class="modal-content">
           <span class="close" onclick="closeModal('${id}')">✖</span>
           <h2>${membre.nom}</h2>
-
-          <span class="badge-role" style="
-            display:inline-block;
-            margin-bottom:10px;
-            padding:6px 14px;
-            background:#1f8f4a;
-            color:#fff;
-            border-radius:20px;
-            font-size:13px;
-            font-weight:600;
-          ">
-            ${membre.role}
-          </span>
-
+          <span class="badge-role">${membre.role}</span>
           <p>${membre.description}</p>
         </div>
       </div>
     `;
   });
-
-  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
-  pagination.innerHTML = "";
-
-  for(let i = 1; i <= totalPages; i++){
-    pagination.innerHTML += `
-      <button onclick="goPage(${i})"
-        style="
-          margin:5px;
-          padding:8px 14px;
-          border:none;
-          border-radius:20px;
-          background:${i === currentPage ? '#1f8f4a' : '#ccc'};
-          color:${i === currentPage ? '#fff' : '#000'};
-          cursor:pointer;
-        ">
-        ${i}
-      </button>
-    `;
-  }
-}
-
-function goPage(p){
-  currentPage = p;
-  renderPage();
 }
 
 function openModal(id){
   document.getElementById(id).style.display = "flex";
 }
-
 function closeModal(id){
   document.getElementById(id).style.display = "none";
 }
@@ -340,14 +312,3 @@ function closeModal(id){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
