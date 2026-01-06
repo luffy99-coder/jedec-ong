@@ -2,8 +2,27 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+
 <title>Actualités | ONG JEDEC</title>
-  <link rel="icon" type="image/png" href="image/favicon.png">
+
+<!-- SEO -->
+<meta name="description" content="Actualités et activités de l’ONG JEDEC : projets communautaires, actions sociales, événements et initiatives en faveur des jeunes et du développement durable au Bénin.">
+<meta name="keywords" content="ONG JEDEC actualités, activités ONG JEDEC, projets communautaires, actions sociales Bénin, ONG jeunesse, développement communautaire">
+<meta name="author" content="ONG JEDEC">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Actualités | ONG JEDEC">
+<meta property="og:description" content="Suivez les actions, projets et événements menés par l’ONG JEDEC au service des communautés.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Actualités | ONG JEDEC">
+<meta name="twitter:description" content="Découvrez les dernières actualités et activités de l’ONG JEDEC.">
+
+<link rel="icon" type="image/png" href="image/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -160,7 +179,6 @@ footer{
 </section>
 
 <section class="container">
-  <!-- ACTUS AUTOMATIQUES -->
   <div class="news-grid" id="newsGrid"></div>
 </section>
 
@@ -183,7 +201,7 @@ fetch(CSV_URL)
     }
 
     let rows = csv.trim().split("\n");
-    rows.shift(); // SUPPRIME L'EN-TÊTE (OBLIGATOIRE)
+    rows.shift();
 
     let html = "";
 
@@ -228,9 +246,3 @@ fetch(CSV_URL)
 
 </body>
 </html>
-
-
-
-
-
-
