@@ -7,18 +7,38 @@
   </url>
 
   <url>
-    <loc>https://jedecong.org/actualite</loc>
+    <loc>https://jedecong.org/actualites.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://jedecong.org/partenaires</loc>
+    <loc>https://jedecong.org/partenaires.html</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://jedecong.org/jeunes</loc>
+    <loc>https://jedecong.org/programmes.html</loc>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://jedecong.org/apropos.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jedecong.org/contact.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jedecong.org/don.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://jedecong.org/statuts-gouvernance.html</loc>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
