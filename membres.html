@@ -1,0 +1,1327 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <!-- ===================================================== -->
+  <!-- SEO ULTRA DOSÉ – JEDEC-ONG (BÉNIN)                     -->
+  <!-- PAGE : MEMBRES                                         -->
+  <!-- Auto via Google Sheet | OG | Twitter | Schema          -->
+  <!-- ===================================================== -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Membres | JEDEC-ONG</title>
+  <meta name="description" content="Découvrez les membres, la direction et les équipes de JEDEC-ONG (Bénin) : gouvernance, coordination, bénévoles et membres actifs. Mise à jour automatique." />
+  <meta name="keywords" content="JEDEC-ONG, JEDEC, membres, équipe, gouvernance, direction, bureau, bénévoles, ONG Bénin, développement communautaire" />
+  <meta name="author" content="JEDEC-ONG" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <meta name="language" content="fr" />
+  <meta name="geo.region" content="BJ" />
+  <meta name="geo.placename" content="Bénin" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <link rel="canonical" href="https://jedecong.org/membres.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JEDEC-ONG" />
+  <meta property="og:title" content="Membres | JEDEC-ONG" />
+  <meta property="og:description" content="Direction, bureau, bénévoles et membres actifs de JEDEC-ONG au Bénin. Mise à jour automatique." />
+  <meta property="og:url" content="https://jedecong.org/membres.html" />
+  <meta property="og:image" content="https://jedecong.org/logo.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Membres | JEDEC-ONG" />
+  <meta name="twitter:description" content="Direction, bureau, bénévoles et membres actifs de JEDEC-ONG au Bénin. Mise à jour automatique." />
+  <meta name="twitter:image" content="https://jedecong.org/logo.png" />
+
+  <!-- SCHEMA.ORG -->
+  <script type="application/ld+json" id="schema-base">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"NGO",
+        "name":"JEDEC-ONG",
+        "alternateName":"Jeunes Engagés pour le Développement Communautaire",
+        "url":"https://jedecong.org/",
+        "logo":"https://jedecong.org/logo.png",
+        "areaServed":{"@type":"Country","name":"Bénin"},
+        "address":{"@type":"PostalAddress","addressCountry":"BJ"},
+        "sameAs":[
+          "https://www.facebook.com/profile.php?id=100070015247122"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "name":"JEDEC-ONG",
+        "url":"https://jedecong.org/"
+      },
+      {
+        "@type":"WebPage",
+        "name":"Membres",
+        "url":"https://jedecong.org/membres.html",
+        "isPartOf":{"@type":"WebSite","url":"https://jedecong.org/"}
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --blue:#123a8a;
+      --green:#0b7a55;
+      --yellow:#f4c430;
+      --red:#c62828;
+      --dark:#0b1220;
+
+      --card:#ffffff;
+      --muted:#6b7280;
+      --ink:#111827;
+      --line:#e5e7eb;
+
+      --shadow:0 18px 45px rgba(0,0,0,.10);
+      --shadow2:0 26px 65px rgba(0,0,0,.14);
+      --ring:0 0 0 3px rgba(244,196,48,.22);
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:"Segoe UI",Arial,sans-serif; }
+    body{
+      background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
+      color:#222; line-height:1.7; overflow-x:hidden;
+    }
+
+    header{
+      position:fixed; top:0; width:100%;
+      background:rgba(255,255,255,.97);
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      z-index:1000;
+      backdrop-filter:saturate(140%) blur(8px);
+    }
+
+    .nav{
+      max-width:1200px; margin:auto;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 18px; gap:14px;
+    }
+
+    .logo{ display:flex; align-items:center; gap:10px; min-width:240px; }
+    .logo img{ height:46px; filter: drop-shadow(0 6px 14px rgba(0,0,0,.10)); }
+    .logo span{ font-weight:900; color:var(--blue); font-size:16px; line-height:1.15; letter-spacing:.1px; }
+
+    /* NAV 1 ligne propre */
+    nav{ display:flex; align-items:center; gap:10px; flex-wrap:nowrap; white-space:nowrap; }
+    nav a{
+      text-decoration:none; color:#263041;
+      font-weight:800; font-size:15px;
+      padding:10px 8px; border-radius:10px; position:relative;
+      transition: color .18s ease, background .18s ease, transform .18s ease;
+    }
+    nav a:hover{ color:var(--blue); background:rgba(18,58,138,.06); transform: translateY(-1px); }
+    nav a::after{
+      content:""; position:absolute; left:10px; right:10px; bottom:6px;
+      height:2px; border-radius:999px; transform: scaleX(0); transform-origin:left;
+      background:linear-gradient(90deg,var(--yellow),var(--green),var(--blue));
+      transition: transform .25s ease;
+    }
+    nav a:hover::after{ transform: scaleX(1); }
+    nav a.active{ color:var(--blue); background:rgba(18,58,138,.08); }
+    nav a.active::after{ transform: scaleX(1); }
+
+    .menu-toggle{ display:none; font-size:34px; cursor:pointer; user-select:none; }
+
+    /* HERO */
+    .hero{
+      min-height:58vh;
+      background:
+        linear-gradient(120deg, rgba(11,18,32,.72), rgba(11,42,106,.58), rgba(11,122,85,.48)),
+        url('jedec.jpg') center/cover no-repeat;
+      display:flex; align-items:center; justify-content:center;
+      text-align:center; color:#fff; padding:22px;
+      margin-top:74px;
+      position:relative; overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-140px -140px auto -140px;
+      height:460px;
+      background:
+        radial-gradient(closest-side, rgba(244,196,48,.18), transparent 70%),
+        radial-gradient(closest-side, rgba(11,122,85,.18), transparent 70%),
+        radial-gradient(closest-side, rgba(18,58,138,.18), transparent 70%);
+      filter: blur(10px);
+      opacity:.92;
+      transform: rotate(-10deg);
+      animation: heroGlow 9s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes heroGlow{
+      0%,100%{ transform: translateY(0) rotate(-10deg); opacity:.86; }
+      50%{ transform: translateY(18px) rotate(-8deg); opacity:1; }
+    }
+
+    .hero::after{
+      content:""; position:absolute; inset:0;
+      background:
+        linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 52px 52px; opacity:.10; pointer-events:none;
+    }
+
+    .hero h1{
+      font-size:48px; max-width:980px; margin:auto;
+      font-weight:1000;
+      text-shadow:0 14px 45px rgba(0,0,0,.35);
+      letter-spacing:.2px;
+      position:relative; z-index:1;
+    }
+    .hero p{
+      margin-top:16px; font-size:18.5px; line-height:1.9;
+      max-width:980px; margin-left:auto; margin-right:auto;
+      opacity:.96;
+      text-shadow:0 12px 40px rgba(0,0,0,.28);
+      position:relative; z-index:1;
+    }
+
+    .hero-badges{
+      margin-top:16px;
+      display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+      position:relative; z-index:1;
+    }
+    .hero-badges span{
+      padding:9px 14px; border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:900; font-size:14px;
+      box-shadow:0 14px 40px rgba(0,0,0,.12);
+      backdrop-filter: blur(8px);
+    }
+
+    .cta{
+      margin-top:22px;
+      display:flex; justify-content:center; gap:12px; flex-wrap:wrap;
+      position:relative; z-index:1;
+    }
+    .btn-hero{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:14px 22px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:1000;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      border:none; cursor:pointer;
+    }
+    .btn-hero:hover{ transform:translateY(-2px); box-shadow:0 16px 35px rgba(0,0,0,.18); filter:saturate(1.05); }
+    .btn-hero:focus{ outline:none; box-shadow: var(--ring), 0 18px 45px rgba(0,0,0,.16); }
+
+    .btn-primary{ background:linear-gradient(90deg,var(--yellow),#ffe27a); color:#000; }
+    .btn-outline{ background:transparent; border:2px solid rgba(255,255,255,.92); color:#fff; }
+
+    main{
+      max-width:1200px; margin:auto;
+      padding:45px 20px 80px;
+      display:grid; gap:70px;
+    }
+
+    /* Section cards (signature JEDEC) */
+    .section-card{
+      background:
+        radial-gradient(1200px 500px at 0% 0%, rgba(244,196,48,.11), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(11,122,85,.11), transparent 55%),
+        linear-gradient(180deg,#ffffff,#fbfbfb);
+      padding:60px;
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+
+      opacity:0;
+      transform:translateY(26px) scale(.985);
+      filter: blur(4px);
+      transition:opacity .72s cubic-bezier(.2,.8,.2,1),
+                 transform .72s cubic-bezier(.2,.8,.2,1),
+                 filter .72s cubic-bezier(.2,.8,.2,1);
+      will-change: transform, opacity, filter;
+      transition-delay: var(--delay, 0ms);
+    }
+    .section-card.in-view{ opacity:1; transform:none; filter:none; }
+
+    .section-card::before{
+      content:""; position:absolute; top:0; left:0;
+      width:7px; height:100%;
+      background:linear-gradient(180deg,var(--blue),var(--green),var(--yellow),var(--red),var(--blue));
+      background-size:100% 260%;
+      animation:borderFlow 5.8s ease-in-out infinite;
+      opacity:.95;
+    }
+    @keyframes borderFlow{ 0%,100%{ background-position:0% 0%; } 50%{ background-position:0% 100%; } }
+
+    .section-card::after{
+      content:""; position:absolute; inset:-40%;
+      background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,.42), transparent 60%);
+      transform: translateX(-45%) rotate(10deg);
+      opacity:0; transition: opacity .25s ease; pointer-events:none;
+    }
+    .section-card:hover{ box-shadow:var(--shadow2); transform: translateY(-4px); }
+    .section-card:hover::after{ opacity:1; animation: shineSweep 1.05s ease forwards; }
+    @keyframes shineSweep{ 0%{ transform: translateX(-55%) rotate(10deg);} 100%{ transform: translateX(55%) rotate(10deg);} }
+
+    .section-card h2{
+      text-align:center; color:var(--blue);
+      margin-bottom:20px; font-size:36px; letter-spacing:.2px;
+    }
+    .section-card p{ margin-bottom:18px; font-size:18px; line-height:1.9; color:#1f2937; }
+
+    /* Controls */
+    .controls{ display:grid; gap:14px; margin-top:10px; }
+    .search{
+      width:100%;
+      border:1px solid var(--line);
+      background:#f8fafc;
+      border-radius:16px;
+      padding:14px 16px;
+      font-size:16px;
+      font-weight:900;
+      outline:none;
+    }
+    .search:focus{
+      border-color:rgba(18,58,138,.45);
+      box-shadow:0 0 0 4px rgba(18,58,138,.12);
+      background:#fff;
+    }
+
+    .chips{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-start; }
+    .chip{
+      border:1px solid var(--line);
+      background:#f8fafc;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:1000;
+      font-size:14px;
+      cursor:pointer;
+      user-select:none;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .chip:hover{ transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.08); }
+    .chip.active{
+      background:rgba(18,58,138,.10);
+      border-color:rgba(18,58,138,.35);
+      color:var(--blue);
+    }
+
+    .count{ color:var(--muted); font-weight:1000; font-size:14px; margin-top:6px; }
+
+    .label-row{ display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+    .label-pill{
+      display:inline-flex; align-items:center; gap:10px;
+      width:max-content;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(18,58,138,.10);
+      border:1px solid rgba(18,58,138,.25);
+      color:var(--blue);
+      font-weight:1000;
+      font-size:14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:var(--green);
+      box-shadow:0 0 0 6px rgba(11,122,85,.12);
+    }
+
+    /* MEMBRES GRID (style unique JEDEC, pas copie MDJ) */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:18px;
+      margin-top:12px;
+    }
+
+    .member{
+      border-radius:20px;
+      background:
+        radial-gradient(800px 300px at 0% 0%, rgba(244,196,48,.14), transparent 60%),
+        radial-gradient(800px 300px at 100% 0%, rgba(11,122,85,.12), transparent 60%),
+        linear-gradient(180deg,#ffffff,#fbfbfb);
+      border:1px solid rgba(17,24,39,.06);
+      box-shadow:0 12px 30px rgba(0,0,0,.06);
+      overflow:hidden;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      position:relative;
+      display:grid;
+      grid-template-columns: 118px 1fr;
+      gap:14px;
+      padding:16px;
+      align-items:center;
+    }
+    .member:hover{
+      transform: translateY(-6px);
+      box-shadow:0 22px 55px rgba(0,0,0,.11);
+      border-color: rgba(244,196,48,.28);
+    }
+
+    .avatar{
+      width:108px; height:108px;
+      border-radius:18px;
+      overflow:hidden;
+      background:#0b1b2a;
+      border:1px solid rgba(18,58,138,.18);
+      box-shadow:0 14px 35px rgba(0,0,0,.10);
+      position:relative;
+      display:flex; align-items:center; justify-content:center;
+      user-select:none;
+    }
+
+    .avatar::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: linear-gradient(135deg, rgba(244,196,48,.55), rgba(11,122,85,.40), rgba(18,58,138,.45));
+      opacity:.18;
+      pointer-events:none;
+    }
+
+    .avatar img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.02);
+    }
+
+    .initials{
+      font-weight:1000;
+      font-size:28px;
+      color:#fff;
+      letter-spacing:.8px;
+      position:relative;
+      z-index:1;
+    }
+
+    .info{ display:grid; gap:8px; min-width:0; }
+
+    .name{
+      font-weight:1000;
+      font-size:18px;
+      color:#0b1220;
+      line-height:1.2;
+      text-transform:uppercase;
+      letter-spacing:.3px;
+      word-break:break-word;
+    }
+
+    .poste{
+      font-weight:900;
+      font-size:14.5px;
+      color:#1f2937;
+      opacity:.92;
+      word-break:break-word;
+    }
+
+    .badges{
+      display:flex; gap:8px; flex-wrap:wrap;
+      margin-top:2px;
+    }
+
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      width:max-content;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:1000;
+      font-size:12.5px;
+      border:1px solid rgba(17,24,39,.08);
+      background:#f8fafc;
+      color:#1f2a37;
+    }
+
+    .badge.cat{ background:rgba(18,58,138,.10); border-color:rgba(18,58,138,.22); color:var(--blue); }
+    .badge.role{ background:rgba(244,196,48,.18); border-color:rgba(244,196,48,.30); color:#6b4b00; }
+    .badge.role.vip{ background:rgba(198,40,40,.12); border-color:rgba(198,40,40,.22); color:#7a1212; }
+
+    .bio{
+      font-weight:650;
+      font-size:14.5px;
+      color:#374151;
+      line-height:1.75;
+    }
+
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:4px;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px; border-radius:999px;
+      text-decoration:none; font-weight:1000; font-size:13px;
+      cursor:pointer; user-select:none; border:none;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 25px rgba(0,0,0,.12); }
+    .btn.dark{ background:#0b1b2a; color:#fff; border:1px solid rgba(255,255,255,.12); }
+    .btn.outline{ background:#fff; color:var(--blue); border:2px solid rgba(18,58,138,.55); }
+    .btn.gold{ background:linear-gradient(90deg,var(--yellow),#ffe27a); color:#000; }
+
+    .loading, .error{
+      text-align:center; color:#1f2937; font-weight:1000;
+      padding:22px; background:#f8fafc; border:1px solid #eef2f7;
+      border-radius:16px; margin-top:12px;
+    }
+
+    /* MODAL PROFIL */
+    .modal{
+      position:fixed; inset:0; display:none;
+      align-items:center; justify-content:center;
+      padding:18px; z-index:2000;
+      background:rgba(0,0,0,.62);
+      backdrop-filter: blur(6px);
+    }
+    .modal.open{ display:flex; }
+
+    .modal-card{
+      width:min(1040px,100%);
+      max-height:92vh;
+      overflow:auto;
+      border-radius:22px;
+      background:linear-gradient(180deg,#0a0f1d,#0b1b2a);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 30px 80px rgba(0,0,0,.45);
+      position:relative;
+    }
+
+    .modal-close{
+      position:absolute; top:12px; right:12px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:1000;
+      cursor:pointer;
+    }
+
+    .modal-inner{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      padding:16px;
+    }
+
+    .modal-left{
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      overflow:hidden;
+      min-height:420px;
+      position:relative;
+      display:flex; align-items:center; justify-content:center;
+    }
+
+    .modal-left img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .modal-initials{
+      width:100%; height:100%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:44px; font-weight:1000;
+      letter-spacing:1px;
+      background:
+        radial-gradient(700px 300px at 0% 0%, rgba(244,196,48,.18), transparent 60%),
+        radial-gradient(700px 300px at 100% 0%, rgba(11,122,85,.16), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    }
+
+    .modal-right{
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      padding:16px;
+      display:grid;
+      gap:12px;
+      align-content:start;
+    }
+
+    .modal-top{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap:10px; flex-wrap:wrap;
+    }
+
+    .modal-name{
+      font-size:22px;
+      font-weight:1000;
+      line-height:1.2;
+      text-transform:uppercase;
+      letter-spacing:.3px;
+    }
+
+    .modal-poste{
+      color:rgba(255,255,255,.88);
+      font-weight:900;
+      font-size:14.5px;
+      margin-top:6px;
+    }
+
+    .modal-badges{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+    .mBadge{
+      display:inline-flex; align-items:center; gap:8px;
+      width:max-content;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:1000;
+      font-size:12.5px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+    }
+    .mBadge.role.vip{ background:rgba(198,40,40,.16); border-color:rgba(198,40,40,.22); }
+
+    .modal-bio{
+      color:rgba(255,255,255,.86);
+      font-size:15.5px;
+      line-height:1.85;
+      font-weight:650;
+      white-space:pre-wrap;
+      margin-top:2px;
+    }
+
+    .modal-contacts{
+      display:grid;
+      gap:10px;
+      margin-top:6px;
+    }
+
+    .contact-line{
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .contact-line strong{ font-weight:1000; }
+    .contact-line span{ color:rgba(255,255,255,.85); font-weight:800; }
+
+    .modal-actions{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      margin-top:6px;
+    }
+
+    footer{
+      background:linear-gradient(90deg,var(--blue),var(--dark));
+      color:white; padding:50px 20px; text-align:center;
+      position:relative; overflow:hidden;
+    }
+    footer::before{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(closest-side, rgba(244,196,48,.18), transparent 60%);
+      opacity:.7; filter: blur(6px);
+      pointer-events:none;
+      animation: footerGlow 8.5s ease-in-out infinite;
+    }
+    @keyframes footerGlow{
+      0%,100%{ transform: translateY(0); opacity:.55; }
+      50%{ transform: translateY(14px); opacity:.85; }
+    }
+    footer p{ opacity:.95; position:relative; z-index:1; }
+
+    @media(max-width:900px){
+      header{ position:sticky; top:0; }
+      .menu-toggle{ display:block; }
+
+      nav{
+        position:absolute; top:72px; left:0; width:100%;
+        background:white; flex-direction:column; display:none;
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+        padding:10px 0;
+        white-space:normal;
+      }
+      nav.active{ display:flex; }
+      nav a{
+        margin:0; width:100%; text-align:center;
+        font-size:18px; padding:14px 10px; border-radius:0;
+      }
+      nav a::after{ display:none; }
+
+      .hero{ margin-top:0 !important; min-height:56vh; padding:42px 18px; }
+      .hero h1{ font-size:34px; line-height:1.15; }
+      .hero p{ font-size:17px; line-height:1.75; }
+
+      .section-card{ padding:40px 25px; }
+      .section-card h2{ font-size:30px; }
+
+      .grid{ grid-template-columns:1fr; }
+      .member{ grid-template-columns: 106px 1fr; }
+      .avatar{ width:96px; height:96px; }
+
+      .modal-inner{ grid-template-columns:1fr; }
+      .modal-left{ min-height:260px; }
+      .modal-name{ font-size:20px; }
+    }
+
+    @media (min-width:901px) and (max-width:1100px){
+      nav a{ font-size:14px; padding:10px 7px; }
+      .logo span{ font-size:15px; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+      .section-card{ opacity:1 !important; transform:none !important; filter:none !important; }
+      .section-card::after{ display:none !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="logo.png" alt="Logo JEDEC-ONG">
+      <span>JEDEC-ONG<br>Développement communautaire</span>
+    </div>
+
+    <div class="menu-toggle" id="navBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</div>
+
+    <nav id="navMenu">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="status-gouvernance.html">Status &amp; Gouvernance</a>
+      <a href="programmes.html">Programmes</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="membres.html" class="active">Membres</a>
+      <a href="don.html">Don</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div style="position:relative;z-index:2;">
+    <h1>Membres &amp; Gouvernance</h1>
+    <p>
+      Une équipe structurée, engagée et proche du terrain : direction, bureau, coordination, bénévoles et membres actifs.
+      Cette page se met à jour automatiquement depuis notre registre officiel.
+    </p>
+
+    <div class="hero-badges" aria-label="Informations clés">
+      <span>Transparence • Organisation</span>
+      <span>Direction • Bureau • Membres actifs</span>
+      <span>Recherche • Filtres • Profil détaillé</span>
+    </div>
+
+    <div class="cta">
+      <a href="contact.html" class="btn-hero btn-primary">Rejoindre JEDEC</a>
+      <a href="status-gouvernance.html" class="btn-hero btn-outline">Voir notre gouvernance</a>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="section-card">
+    <h2><span>🧭</span>Notre engagement de gouvernance</h2>
+    <p>
+      JEDEC-ONG s’appuie sur une gouvernance claire et responsable : une direction qui pilote, des équipes qui coordonnent,
+      et des membres engagés qui agissent au quotidien. Notre objectif : garantir l’efficacité, la transparence et l’impact
+      des actions menées au service des communautés.
+    </p>
+
+    <p style="opacity:.92">
+      Les informations ci-dessous sont issues d’un registre interne mis à jour. Vous pouvez rechercher un membre, filtrer par
+      catégorie (tag) et consulter les profils détaillés.
+    </p>
+
+    <div class="controls">
+      <input id="searchInput" class="search" type="search" placeholder="Rechercher : nom, poste, tag, mot-clé..." autocomplete="off">
+      <div class="chips" id="chips"></div>
+      <div class="count" id="count">Chargement…</div>
+    </div>
+
+    <div id="status" class="loading">Chargement des membres depuis Google Sheet…</div>
+  </section>
+
+  <section class="section-card" id="leadSection" style="display:none;">
+    <div class="label-row">
+      <span class="label-pill"><span class="dot"></span>Direction (mise en avant)</span>
+      <span class="count" id="leadCount"></span>
+    </div>
+    <div class="grid" id="leadGrid"></div>
+  </section>
+
+  <section class="section-card">
+    <div class="label-row">
+      <span class="label-pill"><span class="dot"></span>Tous les membres</span>
+      <span class="count" id="allCount"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> JEDEC-ONG — Tous droits réservés</p>
+  <p style="margin-top:10px;opacity:.9;font-weight:700;">Site conçu et développé par <strong>Dine (DineTech)</strong></p>
+</footer>
+
+<!-- MODAL PROFIL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <button class="modal-close" id="modalClose">Fermer</button>
+
+    <div class="modal-inner">
+      <div class="modal-left" id="modalMedia">
+        <div class="modal-initials" id="modalInitials" style="display:none;"></div>
+        <img id="modalImg" alt="" style="display:none;">
+      </div>
+
+      <div class="modal-right">
+        <div>
+          <div class="modal-name" id="modalName"></div>
+          <div class="modal-poste" id="modalPoste"></div>
+          <div class="modal-badges" id="modalBadges"></div>
+        </div>
+
+        <div class="modal-bio" id="modalBio"></div>
+
+        <div class="modal-contacts">
+          <div class="contact-line">
+            <strong>📞 Téléphone :</strong>
+            <span id="modalPhoneText">Non renseigné</span>
+          </div>
+          <div class="contact-line">
+            <strong>✉️ Email :</strong>
+            <span id="modalEmailText">Non renseigné</span>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <a class="btn dark" id="btnWhatsapp" target="_blank" rel="noopener" style="display:none;">WhatsApp</a>
+          <a class="btn dark" id="btnEmail" target="_blank" rel="noopener" style="display:none;">Email</a>
+          <button class="btn dark" id="btnCopy">Copier le lien</button>
+          <a class="btn outline" href="contact.html">Nous contacter</a>
+        </div>
+
+        <div class="count" id="copyHint" style="display:none;color:rgba(255,255,255,.75);font-weight:900;">
+          Lien copié ✅
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================
+   CONFIG (JEDEC)
+========================= */
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQF_fvn6d07XjnISJ6j-_qqCuagDHHSUV4afibtXf6iRlSCZ9qvMEW89UKO5X9WlcIL7FjWxfQX8Yzz/pub?gid=1065043078&single=true&output=csv";
+const SITE_ORIGIN = "https://jedecong.org";
+const PAGE_PATH = "/membres.html";
+
+const year = document.getElementById("year");
+if (year) year.textContent = String(new Date().getFullYear());
+
+/* =========================
+   NAV MOBILE
+========================= */
+(() => {
+  const navBtn = document.getElementById("navBtn");
+  const navMenu = document.getElementById("navMenu");
+  if (navBtn && navMenu) {
+    navBtn.addEventListener("click", () => {
+      const open = navMenu.classList.toggle("active");
+      navBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    navMenu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        navBtn.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+})();
+
+/* =========================
+   ANIMATION AU SCROLL (stagger)
+========================= */
+(() => {
+  const cards = document.querySelectorAll(".section-card");
+  cards.forEach((c, i) => c.style.setProperty("--delay", `${Math.min(i * 90, 540)}ms`));
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in-view"); });
+  }, { threshold: 0.12 });
+
+  cards.forEach(s => obs.observe(s));
+})();
+
+/* =========================
+   CSV PARSER (robuste)
+========================= */
+function parseCSV(text){
+  const rows = [];
+  let row = [];
+  let cur = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    const next = text[i + 1];
+
+    if (c === '"' ) {
+      if (inQuotes && next === '"') { cur += '"'; i++; }
+      else { inQuotes = !inQuotes; }
+    } else if (c === "," && !inQuotes) {
+      row.push(cur); cur = "";
+    } else if ((c === "\n" || c === "\r") && !inQuotes) {
+      if (c === "\r" && next === "\n") i++;
+      row.push(cur); cur = "";
+      if (row.length > 1 || row[0] !== "") rows.push(row);
+      row = [];
+    } else {
+      cur += c;
+    }
+  }
+  row.push(cur);
+  if (row.length > 1 || row[0] !== "") rows.push(row);
+
+  const header = rows.shift()?.map(h => (h || "").trim().toLowerCase()) || [];
+  return rows.map(r => {
+    const obj = {};
+    header.forEach((h, idx) => obj[h] = (r[idx] || "").trim());
+    return obj;
+  });
+}
+
+/* =========================
+   HELPERS
+========================= */
+function escapeHTML(s){
+  return (s || "").replace(/[&<>"']/g, (c) => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+function escapeAttr(s){ return escapeHTML(s).replace(/"/g, "&quot;"); }
+
+function toSlug(s){
+  return (s || "")
+    .toString()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/(^-|-$)/g,"")
+    .slice(0, 90);
+}
+
+function initialsFromName(name){
+  const parts = (name || "").trim().split(/\s+/).filter(Boolean);
+  const a = parts[0]?.[0] || "";
+  const b = parts.length > 1 ? parts[parts.length - 1][0] : (parts[0]?.[1] || "");
+  return (a + b).toUpperCase() || "JE";
+}
+
+function truncate(txt, n){
+  const t = (txt || "").replace(/\s+/g," ").trim();
+  if (t.length <= n) return t;
+  return t.slice(0, n).trim() + "…";
+}
+
+function safeImage(url){
+  const u = (url || "").trim();
+  return u || "";
+}
+
+function asNumber(v, fallback){
+  const n = Number(String(v || "").replace(",", ".").trim());
+  return Number.isFinite(n) ? n : fallback;
+}
+
+/* Détection rôle (pas de colonne badge) */
+function detectRole(poste){
+  const p = (poste || "").toLowerCase();
+
+  // ✅ Président / Directeur (toujours en haut)
+  if (/\bpresident\b/.test(p) || /président/.test(p)) return { label:"Président", level:0, vip:true };
+  if (/\bdirecteur\b/.test(p) || /\bdirectrice\b/.test(p)) return { label:"Directeur", level:0, vip:true };
+
+  // Vice-président (juste après)
+  if (/\bvice\b/.test(p) && (/\bpresident\b/.test(p) || /président/.test(p))) return { label:"Vice-président", level:1, vip:false };
+
+  // Option : coordonnateur / secrétaire général (tu peux étendre si tu veux)
+  if (/\bcoordonnateur\b/.test(p) || /\bcoordonnatrice\b/.test(p)) return { label:"Coordination", level:2, vip:false };
+  if (/\bsecretaire\b/.test(p) && /\bgeneral\b/.test(p)) return { label:"Secrétaire général", level:2, vip:false };
+
+  return { label:"Membre", level:3, vip:false };
+}
+
+/* Phone -> WhatsApp (Bénin) */
+function normalizePhoneForWA(phone){
+  const raw = String(phone || "").trim();
+  if (!raw) return "";
+  let digits = raw.replace(/[^\d+]/g, "");
+  // garder uniquement chiffres
+  digits = digits.replace(/[^\d]/g, "");
+
+  // Si 8 chiffres (Bénin), on ajoute 229
+  if (digits.length === 8) digits = "229" + digits;
+
+  // Si commence par 00, enlever 00
+  if (digits.startsWith("00")) digits = digits.slice(2);
+
+  // WhatsApp attend sans +
+  return digits;
+}
+
+function buildProfileUrl(slug){
+  return `${SITE_ORIGIN}${PAGE_PATH}#${encodeURIComponent(slug)}`;
+}
+
+/* =========================
+   DOM
+========================= */
+const statusEl = document.getElementById("status");
+const chipsEl = document.getElementById("chips");
+const gridEl = document.getElementById("grid");
+
+const leadSection = document.getElementById("leadSection");
+const leadGrid = document.getElementById("leadGrid");
+const leadCount = document.getElementById("leadCount");
+
+const searchInput = document.getElementById("searchInput");
+const countEl = document.getElementById("count");
+const allCount = document.getElementById("allCount");
+
+let allMembers = [];
+let activeTag = "Tous";
+let query = "";
+
+/* =========================
+   NORMALIZE
+   Ordre exact du Sheet:
+   nom | poste | photo | telephone | email | bio | ordre | tag
+========================= */
+function normalizeMembers(raw){
+  return raw.map(r => {
+    const nom = r.nom || r.name || "";
+    const poste = r.poste || "";
+    const photo = safeImage(r.photo || "");
+    const telephone = r.telephone || r.téléphone || "";
+    const email = r.email || "";
+    const bio = r.bio || "";
+    const ordre = asNumber(r.ordre, 9999);
+    const tag = (r.tag || "Membres").trim() || "Membres";
+
+    const slug = toSlug(nom + "-" + poste) || toSlug(nom) || ("membre-" + Math.random().toString(16).slice(2));
+    const role = detectRole(poste);
+
+    return {
+      nom,
+      poste,
+      photo,
+      telephone,
+      email,
+      bio,
+      bioShort: truncate(bio, 105),
+      ordre,
+      tag,
+      slug,
+      roleLabel: role.label,
+      roleLevel: role.level,
+      roleVip: role.vip
+    };
+  })
+  .filter(x => x.nom || x.poste || x.bio)
+  .sort((a,b) => {
+    // 1) Rôle prioritaire
+    if (a.roleLevel !== b.roleLevel) return a.roleLevel - b.roleLevel;
+    // 2) Ordre (croissant)
+    if (a.ordre !== b.ordre) return a.ordre - b.ordre;
+    // 3) Nom
+    return String(a.nom).localeCompare(String(b.nom), "fr");
+  });
+}
+
+function uniqTags(items){
+  const set = new Set(items.map(x => (x.tag || "").trim()).filter(Boolean));
+  return ["Tous", ...Array.from(set).sort((a,b)=>a.localeCompare(b,"fr"))];
+}
+
+function renderChips(tags){
+  chipsEl.innerHTML = "";
+  tags.forEach(t => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip" + (t === activeTag ? " active" : "");
+    btn.textContent = t;
+    btn.addEventListener("click", () => {
+      activeTag = t;
+      document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+      btn.classList.add("active");
+      render();
+    });
+    chipsEl.appendChild(btn);
+  });
+}
+
+function matchMember(m){
+  const tagOk = (activeTag === "Tous") || (m.tag === activeTag);
+  if (!tagOk) return false;
+
+  const q = (query || "").trim().toLowerCase();
+  if (!q) return true;
+
+  const hay = [
+    m.nom, m.poste, m.tag, m.roleLabel, m.bio
+  ].join(" ").toLowerCase();
+
+  return hay.includes(q);
+}
+
+function badgeHTML(tag, roleLabel, roleVip){
+  const cat = tag ? `<span class="badge cat">🏷️ ${escapeHTML(tag)}</span>` : "";
+  let role = "";
+  if (roleLabel && roleLabel !== "Membre"){
+    role = `<span class="badge role ${roleVip ? "vip":""}">⭐ ${escapeHTML(roleLabel)}</span>`;
+  }
+  return cat + role;
+}
+
+function avatarHTML(m){
+  if (m.photo){
+    return `<div class="avatar" aria-label="Photo de ${escapeAttr(m.nom)}">
+      <img src="${escapeAttr(m.photo)}" alt="${escapeAttr(m.nom)}" loading="lazy">
+    </div>`;
+  }
+  return `<div class="avatar" aria-label="Profil de ${escapeAttr(m.nom)}">
+    <div class="initials">${escapeHTML(initialsFromName(m.nom))}</div>
+  </div>`;
+}
+
+function memberCardHTML(m){
+  const badges = badgeHTML(m.tag, m.roleLabel, m.roleVip);
+  const phoneTxt = m.telephone ? `📞 ${escapeHTML(m.telephone)}` : `📞 Contact non renseigné`;
+  const emailTxt = m.email ? `✉️ ${escapeHTML(m.email)}` : `✉️ Contact non renseigné`;
+
+  return `
+    <article class="member" data-slug="${escapeAttr(m.slug)}">
+      ${avatarHTML(m)}
+      <div class="info">
+        <div class="name">${escapeHTML(m.nom || "Nom")}</div>
+        <div class="poste">${escapeHTML(m.poste || "Poste")}</div>
+
+        <div class="badges">${badges}</div>
+
+        <div class="bio">${escapeHTML(m.bioShort || "—")}</div>
+
+        <div class="actions">
+          <button class="btn gold" data-action="view">Voir profil</button>
+          <button class="btn dark" data-action="copy">Copier lien</button>
+          ${m.telephone ? `<a class="btn outline" data-action="wa" href="#" rel="noopener">WhatsApp</a>` : ``}
+          ${m.email ? `<a class="btn outline" data-action="mail" href="#" rel="noopener">Email</a>` : ``}
+        </div>
+
+        <div class="count" style="margin-top:6px;">${phoneTxt} &nbsp;•&nbsp; ${emailTxt}</div>
+      </div>
+    </article>
+  `;
+}
+
+function bind(container){
+  container.querySelectorAll(".member").forEach(card => {
+    const slug = card.getAttribute("data-slug");
+    const m = allMembers.find(x => x.slug === slug);
+    if (!m) return;
+
+    card.querySelectorAll("[data-action]").forEach(el => {
+      const act = el.getAttribute("data-action");
+
+      if (act === "view"){
+        el.addEventListener("click", () => openBySlug(slug));
+      }
+
+      if (act === "copy"){
+        el.addEventListener("click", () => copyLink(buildProfileUrl(slug)));
+      }
+
+      if (act === "wa"){
+        const wa = normalizePhoneForWA(m.telephone);
+        if (wa){
+          el.setAttribute("href", `https://wa.me/${encodeURIComponent(wa)}?text=${encodeURIComponent("Bonjour, je vous contacte via le site JEDEC-ONG.")}`);
+           el.setAttribute("target","_blank");
+        }
+      }
+
+      if (act === "mail"){
+        el.setAttribute("href", `mailto:${encodeURIComponent(m.email)}`);
+        el.setAttribute("target","_blank");
+      }
+    });
+  });
+}
+
+/* =========================
+   MODAL
+========================= */
+const modal = document.getElementById("modal");
+const modalClose = document.getElementById("modalClose");
+const modalName = document.getElementById("modalName");
+const modalPoste = document.getElementById("modalPoste");
+const modalBadges = document.getElementById("modalBadges");
+const modalBio = document.getElementById("modalBio");
+const modalPhoneText = document.getElementById("modalPhoneText");
+const modalEmailText = document.getElementById("modalEmailText");
+const modalImg = document.getElementById("modalImg");
+const modalInitials = document.getElementById("modalInitials");
+const btnWhatsapp = document.getElementById("btnWhatsapp");
+const btnEmail = document.getElementById("btnEmail");
+const btnCopy = document.getElementById("btnCopy");
+const copyHint = document.getElementById("copyHint");
+
+function openModal(m){
+  modalName.textContent = m.nom;
+  modalPoste.textContent = m.poste;
+  modalBadges.innerHTML = badgeHTML(m.tag, m.roleLabel, m.roleVip);
+  modalBio.textContent = m.bio || "";
+
+  modalPhoneText.textContent = m.telephone || "Non renseigné";
+  modalEmailText.textContent = m.email || "Non renseigné";
+
+  if (m.photo){
+    modalImg.src = m.photo;
+    modalImg.style.display = "";
+    modalInitials.style.display = "none";
+  } else {
+    modalImg.style.display = "none";
+    modalInitials.textContent = initialsFromName(m.nom);
+    modalInitials.style.display = "";
+  }
+
+  if (m.telephone){
+    const wa = normalizePhoneForWA(m.telephone);
+    if (wa){
+      btnWhatsapp.href = `https://wa.me/${wa}?text=${encodeURIComponent("Bonjour, je vous contacte via le site JEDEC-ONG.")}`;
+      btnWhatsapp.style.display = "";
+    }
+  } else {
+    btnWhatsapp.style.display = "none";
+  }
+
+  if (m.email){
+    btnEmail.href = `mailto:${m.email}`;
+    btnEmail.style.display = "";
+  } else {
+    btnEmail.style.display = "none";
+  }
+
+  btnCopy.onclick = () => copyLink(buildProfileUrl(m.slug));
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(){
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+  if (location.hash) history.replaceState({}, "", PAGE_PATH);
+}
+
+modalClose.addEventListener("click", closeModal);
+modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+
+function openBySlug(slug){
+  const m = allMembers.find(x => x.slug === slug);
+  if (!m) return;
+  openModal(m);
+  history.replaceState({}, "", `${PAGE_PATH}#${encodeURIComponent(slug)}`);
+}
+
+function copyLink(url){
+  navigator.clipboard.writeText(url).then(()=>{
+    copyHint.style.display = "";
+    setTimeout(()=>copyHint.style.display="none", 1600);
+  });
+}
+
+/* =========================
+   RENDER
+========================= */
+function render(){
+  const filtered = allMembers.filter(matchMember);
+
+  countEl.textContent = `${filtered.length} membre(s) affiché(s)`;
+  allCount.textContent = `${filtered.length} résultat(s)`;
+
+  const leaders = filtered.filter(m => m.roleLevel === 0);
+  if (leaders.length){
+    leadSection.style.display = "";
+    leadCount.textContent = `${leaders.length} membre(s)`;
+    leadGrid.innerHTML = leaders.map(memberCardHTML).join("");
+    bind(leadGrid);
+  } else {
+    leadSection.style.display = "none";
+    leadGrid.innerHTML = "";
+  }
+
+  gridEl.innerHTML = filtered.map(memberCardHTML).join("");
+  bind(gridEl);
+}
+
+/* =========================
+   LOAD
+========================= */
+async function load(){
+  try{
+    statusEl.className = "loading";
+    statusEl.textContent = "Chargement des membres depuis Google Sheet…";
+
+    const res = await fetch(CSV_URL, { cache:"no-store" });
+    if (!res.ok) throw new Error("CSV non accessible");
+
+    const text = await res.text();
+    const parsed = parseCSV(text);
+    allMembers = normalizeMembers(parsed);
+
+    const tags = uniqTags(allMembers);
+    renderChips(tags);
+
+    statusEl.style.display = "none";
+    render();
+
+    if (location.hash){
+      const slug = decodeURIComponent(location.hash.slice(1));
+      openBySlug(slug);
+    }
+
+  } catch(err){
+    statusEl.className = "error";
+    statusEl.textContent = "Erreur : impossible de charger les membres.";
+    console.error(err);
+  }
+}
+
+searchInput.addEventListener("input", e => {
+  query = e.target.value.toLowerCase().trim();
+  render();
+});
+
+window.addEventListener("hashchange", () => {
+  const slug = decodeURIComponent((location.hash || "").replace("#",""));
+  if (slug) openBySlug(slug);
+});
+
+load();
+</script>
+
+</body>
+</html>
