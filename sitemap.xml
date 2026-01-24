@@ -12,7 +12,7 @@
   </url>
 
   <url>
-    <loc>https://jedecong.org/partenaires.html</loc>
+    <loc>https://jedecong.org/membres.html</loc>
     <priority>0.8</priority>
   </url>
 
@@ -37,8 +37,9 @@
   </url>
 
   <url>
-    <loc>https://jedecong.org/statuts-gouvernance.html</loc>
+    <loc>https://jedecong.org/status-gouvernance.html</loc>
     <priority>0.6</priority>
   </url>
 
 </urlset>
+
